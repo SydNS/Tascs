@@ -4,12 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/logbg"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/loginlayout">
 
-<include
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    layout="@layout/activity_main"
-    tools:ignore="ResourceCycle" />
+    <EditText
+        android:textSize="30dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_address"
+        android:textAlignment="center"
+        android:id="@+id/emaillogin"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/edtlogin"
+        android:elevation="20dp"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="30sp"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:textAlignment="center"
+        android:id="@+id/passlogin"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/emaillogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edtlogin"
+        android:elevation="20dp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/passlogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btnlogin"
+        android:elevation="20dp"
+        android:text="@string/login"
+        android:textSize="30sp"
+        />
 
 </RelativeLayout>
