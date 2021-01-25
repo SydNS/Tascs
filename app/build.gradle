@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -51,9 +55,6 @@ dependencies {
     implementation 'org.jetbrains.anko:anko-design:0.10.1'
     implementation 'org.jetbrains.anko:anko-recyclerview-v7:0.10.1'
     implementation 'org.jetbrains.anko:anko-cardview-v7:0.10.1'
+
 }
-android {
-    viewBinding {
-        enabled = true
-    }
-}
+
