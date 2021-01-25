@@ -1,52 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loginlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/logbg"
-    tools:context=".LoginActivity"
-    android:id="@+id/loginlayout">
+    tools:context=".LoginActivity">
 
-    <EditText
-        android:textSize="30dp"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email_address"
-        android:textAlignment="center"
-        android:id="@+id/emailsignup"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
+    <TextView
+        android:id="@+id/logintitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:background="@drawable/edtlogin"
-        android:elevation="20dp"
-        android:autofillHints="" />
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
 
-    <EditText
-        android:textSize="30sp"
-        android:inputType="textPassword"
-        android:hint="@string/password"
-        android:textAlignment="center"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/unamelogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logintitle"
+        android:hint="@string/username"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        app:endIconDrawable="@string/email_address"
+        app:endIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/black"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passlogin"
         android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/emailsignup"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/edtlogin"
-        android:elevation="20dp"
-        android:autofillHints="" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/unamelogin"
+        android:hint="@string/password"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/black"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnlogin"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
+        android:id="@+id/btnsignup"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/passlogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:background="@drawable/btnlogin"
-        android:elevation="20dp"
+        android:drawableEnd="@android:drawable/ic_menu_send"
+        android:drawableTint="@color/black"
+        android:paddingEnd="10dp"
         android:text="@string/login"
-        android:textSize="30sp"
-        />
+        tools:targetApi="m"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/signuplink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnsignup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/no_account_signup_now"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
 </RelativeLayout>
