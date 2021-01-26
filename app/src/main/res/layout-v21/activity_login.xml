@@ -27,6 +27,7 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         app:endIconDrawable="@string/email_address"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:endIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -43,6 +44,7 @@
         android:layout_below="@id/unamelogin"
         android:hint="@string/password"
         android:layout_marginTop="40dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_centerHorizontal="true">
 
         <com.google.android.material.textfield.TextInputEditText
